@@ -1,0 +1,49 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #ff6f00;
+  text-align: center;
+}
+
+.footer h5 {
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.footer p {
+  margin-bottom: 0.9rem;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #4e247f;
+}
+
+@media (max-width: 768px) {
+  .footer h5 {
+    font-size: 1.2rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+}

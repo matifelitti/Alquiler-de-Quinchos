@@ -1,0 +1,47 @@
+.imagenlogo {
+  width: 130px;
+  height: auto;
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  margin-right: 20px;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  margin-right: auto;
+}
+
+.navbar-dark .nav-link {
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background-color: #ff6f00;
+  color: white;
+}
+
+.bg-orange {
+  background-color: #4e247f;
+}

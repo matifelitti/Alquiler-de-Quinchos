@@ -1,92 +1,115 @@
-.searchwords{
-    justify-content: center;
-    margin-top: 10px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.form-control {
-    border-color: #4e247f;
+.container {
+  margin: auto;
+  padding: 1rem;
 }
 
-.form-check {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    text-align: center;
+.form-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: auto;
+  padding: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 550px;
 }
 
-.form-check-label {
-    color: #4e247f;
-    margin-right: 25px;
-    justify-content: center;
+.custom-checkbox {
+  display: none;
 }
 
-.form-check li a{
-    background-color: #FFC107;
-    color: #4e247f;
-    font-size: 24px;
+.custom-checkbox + .form-check-label {
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
 }
 
-.form-check li a:active,
-.form-check li a:focus,
-.form-check li a:hover {
-    background-color: #4e247f;
-    color: #FFC107;
+.custom-checkbox + .form-check-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.boton,
-.boton:focus,
-.boton:active,
-.boton:hover {
-    background-color: #4e247f;
-    color: #FFC107;
-    border: none;
-    padding: 10px 20px;
-    margin-right: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    text-decoration: none;
-    display: block;
-    margin: 0 auto;
+.custom-checkbox:checked + .form-check-label::before {
+  background-color: #ff6f00;
+  border-color: #ff6f00;
 }
 
-.boton:focus,
-.boton:active,
-.boton:hover {
-    outline: none;
-    background-color: #663399;
+input.form-control {
+  margin: 0 1rem;
+  text-align: center;
+  background-color: #ffee51;
+  border: 1px solid #f57f17;
+  border-radius: 5px;
+  color: #333;
+  outline: none;
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    justify-items: center;
+.form-control:focus {
+  background-color: #ffee51 !important;
+  border-color: #f57f17 !important;
+  box-shadow: none !important;
 }
 
-.card {
-    width: 250px;
-    height: 350px;
-    margin: 10px;
-    position: relative;
+input.form-control::placeholder {
+  color: #555;
 }
 
-.pictures{
-    width: 248px;
-    height: 245px;
+.input-group > .form-control {
+  margin-bottom: 0.5rem;
 }
 
-.small-card {
-    width: 248px;
-    height: 98px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    line-height: 0.9;
-    bottom: 0px;
-    background-color: #FFC107;
-    color: #4e247f;
-        border-radius: 5px;
+.custom-btn {
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.custom-btn:hover {
+  background-color: #d95f00;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.8px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .small-card {
+    padding: 0.8px;
+  }
+
+  .small-card h6 {
+    font-size: 1rem;
+  }
+
+  .small-card p {
+    font-size: 0.8rem;
+  }
 }
