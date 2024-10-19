@@ -228,7 +228,6 @@ public class UsuarioServicio implements UserDetailsService {
         } else {
             return null;
         }
-
     }
 
 }
