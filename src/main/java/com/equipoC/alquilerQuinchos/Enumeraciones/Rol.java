@@ -1,7 +1,6 @@
 package com.equipoC.alquilerQuinchos.Enumeraciones;
 
-public enum Rol{
-    
+public enum Rol {
     ADMIN,
     CLIENTE,
     PROPIETARIO;

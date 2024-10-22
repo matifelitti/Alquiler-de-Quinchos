@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-        <title>Alquiler para fiestas</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/formularios.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    </head>
-    
-    <body>
+<head>
+    <title>Alquiler para Fiestas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/formularios.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
 
-        <nav th:replace="/fragments/navbar :: nav"></nav>
-         <div th:insert="/fragments/msg :: msg"></div>
+<body>
+    <nav th:replace="/fragments/navbar :: nav"></nav>
+    <div th:insert="/fragments/msg :: msg"></div>
 
-        <br><br><br>
-
-        <div class="card-container">
-            <div class="card">
-                <h3 class="card-title">Crear Inmueble</h3>
+    <div class="container my-5">
+        <div class="card shadow mx-auto card-width">
+            <div class="card-body">
+                <h3 class="card-title text-center">Crear Inmueble</h3>
                 <form th:action="@{/inmueble/crear_inmueble}" method="post" enctype="multipart/form-data">
-                    <input type="text" class="form-control" name="nombre" placeholder="Nombre del Inmueble">
-                    <input type="text" class="form-control" name="ubicacion" placeholder="Ubicacion del Inmueble">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre del Inmueble</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre"
+                            placeholder="Nombre del Inmueble" required>
+                    </div>
 
-                    <input type="checkbox" class="form-check-input" id="conCochera" name="cochera">
-                    <label class="form-check-label" for="conCochera">Con Cochera</label>
+                    <div class="mb-3">
+                        <label for="ubicacion" class="form-label">Ubicación del Inmueble</label>
+                        <input type="text" class="form-control" id="ubicacion" name="ubicacion"
+                            placeholder="Ubicación del Inmueble" required>
+                    </div>
 
-                    <input type="checkbox" class="form-check-input" id="parrilla" name="parrilla">
-                    <label class="form-check-label" for="conParrilla">Con Parrilla</label>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="conCochera" name="cochera">
+                        <label class="form-check-label" for="conCochera">Con Cochera</label>
+                    </div>
 
-                    <input type="checkbox" class="form-check-input" id="pileta" name="pileta">
-                    <label class="form-check-label" for="conPileta">Con Pileta</label>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="conParrilla" name="parrilla">
+                        <label class="form-check-label" for="conParrilla">Con Parrilla</label>
+                    </div>
 
-                    <input type="number" class="form-control" name="precioBase" placeholder="Precio Base">
-                    <input type="file" class="form-control" name="archivosImagenes" accept="image/*" placeholder="Imagen del Inmueble" multiple>
-                    <textarea name="descripcion" placeholder="Describe brevemente tu propiedad" maxlength="600" rows="7" cols="60" required></textarea>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="conPileta" name="pileta">
+                        <label class="form-check-label" for="conPileta">Con Pileta</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="precioBase" class="form-label">Precio Base</label>
+                        <input type="number" class="form-control" id="precioBase" name="precioBase"
+                            placeholder="Precio Base" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="archivosImagenes" class="form-label">Imágenes del Inmueble</label>
+                        <input type="file" class="form-control" id="archivosImagenes" name="archivosImagenes"
+                            accept="image/*" multiple required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea name="descripcion" class="form-control" id="descripcion"
+                            placeholder="Describe brevemente tu propiedad" maxlength="600" rows="7" required></textarea>
+                    </div>
+
                     <button type="submit" class="boton">Crear Inmueble</button>
                 </form>
             </div>
         </div>
+    </div>
 
-        <br><br><br>
+    <footer th:replace="/fragments/footer :: footer"></footer>
 
-        <footer th:replace="/fragments/footer :: footer"></footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
 </html>
