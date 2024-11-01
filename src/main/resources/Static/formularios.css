@@ -64,6 +64,34 @@ textarea {
   resize: vertical;
 }
 
+.table {
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+td a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin: 1rem;
+  color: #4e247f;
+  transition: color 0.3s;
+}
+
+td a:hover {
+  color: blue;
+}
+
 @media (max-width: 768px) {
   .card {
     width: 100%;
