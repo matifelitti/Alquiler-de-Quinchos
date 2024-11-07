@@ -46,13 +46,11 @@
   background-color: #4e247f;
 }
 
-.nav-link,
-td a {
+.nav-link {
   color: #8cb5e0;
   transition: color 0.3s;
 }
 
-.nav-link:hover,
-td a:hover {
+.nav-link:hover {
   color: #a0bddb;
 }
