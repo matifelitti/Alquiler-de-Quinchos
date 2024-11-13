@@ -54,6 +54,7 @@
 }
 
 input.form-control {
+  width: 300px;
   margin: 0 1rem;
   background-color: #ffee51;
   border: 1px solid #f57f17;
