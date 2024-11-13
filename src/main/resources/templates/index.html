@@ -55,8 +55,7 @@
                         <div class="card-body text-center">
                             <h6 class="card-title" th:text="${inmueble.nombre}"></h6>
                             <p class="card-text" th:text="${inmueble.ubicacion}"></p>
-                            <a class="btn btn-warning btn-block"
-                                th:href="@{'/reserva/alta/' + ${inmueble.id}}">Reserva!</a>
+                            <a class="custom-btn" th:href="@{'/reserva/alta/' + ${inmueble.id}}">Reserva!</a>
                         </div>
                     </div>
                 </div>

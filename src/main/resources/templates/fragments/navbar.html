@@ -12,7 +12,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav">
+            <div class="navbar-nav flex-column flex-lg-row">
                 <a class="nav-item nav-link" th:if="${session.usuariosession == null}" href="/">Home</a>
                 <a class="nav-item nav-link" th:if="${session.usuariosession != null}"
                     sec:authorize="hasRole('PROPIETARIO') || hasRole('CLIENTE') || hasRole('ADMIN')"
@@ -27,7 +27,8 @@
                 <a class="nav-item nav-link" th:href="@{/admin/usuarios}" th:if="${esAdmin}">Dashboard</a>
                 <a class="nav-item nav-link" href="/login" th:if="${session.usuariosession == null}">Iniciar Sesión</a>
             </div>
-            <div class="d-flex align-items-center">
+
+            <div class="d-flex align-items-center flex-column flex-lg-row">
                 <img class="profile" th:if="${session.usuariosession != null}"
                     th:src="@{/imagen/perfil/__${session.usuariosession.id}__}" alt="Perfil">
                 <div class="nav-item dropdown">

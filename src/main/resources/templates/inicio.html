@@ -38,8 +38,8 @@
                 <div class="d-flex justify-content-center mt-2 align-items-center">
                     <input type="text" name="search" class="form-control" th:value="${search}"
                         placeholder="Encuentra un lugar para tu evento">
-                    <button class="custom-btn me-2" type="submit">Buscar</button>
-                    <a class="custom-btn limpiar-btn" href="/inicio" role="button">Limpiar</a>
+                    <button class="custom-btn m-1" type="submit">Buscar</button>
+                    <a class="custom-btn limpiar-btn m-1" href="/inicio" role="button">Limpiar</a>
                 </div>
             </div>
         </form>
@@ -55,7 +55,7 @@
                         <div class="card-body text-center">
                             <h6 class="card-title" th:text="${inmueble.nombre}"></h6>
                             <p class="card-text" th:text="${inmueble.ubicacion}"></p>
-                            <a class="btn btn-warning btn-block" th:href="@{'/reserva/alta/' + ${inmueble.id}}">Reserva
+                            <a class="custom-btn" th:href="@{'/reserva/alta/' + ${inmueble.id}}">Reserva
                                 !</a>
                         </div>
                     </div>

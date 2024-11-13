@@ -91,17 +91,6 @@ input.form-control::placeholder {
   color: white;
 }
 
-.nav-link,
-td a {
-  color: #8cb5e0;
-  transition: color 0.3s;
-}
-
-.nav-link:hover,
-td a:hover {
-  color: #a0bddb;
-}
-
 @media (max-width: 768px) {
   .container {
     padding: 0.8px;
