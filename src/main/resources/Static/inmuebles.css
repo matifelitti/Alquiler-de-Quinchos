@@ -1,8 +1,4 @@
 .card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   padding: 1.25rem;
 }
 
@@ -51,6 +47,25 @@ td a {
 
 td a:hover {
   color: blue;
+}
+
+.boton {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #4e247f;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boton:hover {
+  background-color: #663399;
 }
 
 @media (max-width: 768px) {
