@@ -24,7 +24,7 @@
                     sec:authorize="hasRole('PROPIETARIO')">Mis Inmuebles</a>
                 <a class="nav-item nav-link" th:href="@{/mis_reservas}" th:if="${session.usuariosession != null}">Mis
                     Reservas</a>
-                <a class="nav-item nav-link" th:href="@{/admin/usuarios}" th:if="${esAdmin}">Dashboard</a>
+                <a class="nav-item nav-link" th:href="@{/admin/usuarios}" sec:authorize="hasRole('ADMIN')">Dashboard</a>
                 <a class="nav-item nav-link" href="/login" th:if="${session.usuariosession == null}">Iniciar Sesión</a>
             </div>
 

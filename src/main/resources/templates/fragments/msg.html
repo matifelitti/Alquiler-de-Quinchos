@@ -1,12 +1,11 @@
 <div th:fragment="msg" class="container-fluid" id="msg">
 
     <style>
-        
-        .container-fluid{
+        .container-fluid {
             position: relative;
         }
-  
-        #error{
+
+        #error {
             position: absolute;
             left: 50%;
             justify-content: center;
@@ -21,8 +20,8 @@
             transform: translate(-50%, -50%);
             display: flex;
         }
-        
-         #exito{
+
+        #exito {
             position: relative;
             justify-content: center;
             align-content: center;
@@ -31,23 +30,23 @@
             text-align: center;
             border: solid;
             border-color: green;
-            z-index: 2; 
+            z-index: 2;
         }
-        
     </style>
-    <div class="container-fluid text-white bg-danger mb-3 d-flex justify-content-center mensajeError" th:if="${error != null}" id="error" >
+    <div class="container-fluid text-white bg-danger mb-3 d-flex justify-content-center mensajeError"
+        th:if="${error != null}" id="error">
         <div class="card-body">
             <h5 class="card-title"><strong>Error!</strong></h5>
             <label th:text="${error}"></label>
-            
+
         </div>
     </div>
-    
-    <div class="container-fluid text-white bg-success mb-3 mt-3 mensajeExito" th:if="${exito != null}" id="exito" >
+
+    <div class="container-fluid text-white bg-success mb-3 mt-3 mensajeExito" th:if="${exito != null}" id="exito">
         <div class="card-body">
             <h5 class="card-title"><strong>Exito!</strong></h5>
             <label th:text="${exito}"></label>
         </div>
     </div>
-       
+
 </div>
