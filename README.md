@@ -43,7 +43,7 @@ Una plataforma web para el **alquiler de quinchos**, ideal para la organización
 
 ### 1️⃣ Clonar el Repositorio  
 ```sh
-git clone https://github.com/tu-usuario/alquiler-quinchos.git  
+git clone https://github.com/matifelitti/alquiler-quinchos.git  
 cd alquiler-quinchos  
 ```  
 
